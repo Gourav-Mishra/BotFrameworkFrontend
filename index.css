@@ -1,0 +1,95 @@
+
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+	background-color: #575655;
+	color: #FFC107;
+	text-shadow: 2px 2px 10px rgba(250, 192, 17, 0.72);
+	padding: 15px 15px;
+	border: none;
+	cursor: pointer;
+	width: 60px;
+	opacity: 1;
+	position: fixed;
+	bottom: 4%;
+    right: 4%;
+	border-radius: 90%;
+	font-size: 1.4em;
+	box-shadow: 3px 3px 10px rgba(0,0,0,0.4), -3px -3px 10px rgba(0,0,0,0.4);
+	outline: none;
+	transform-origin: 50% 50%;
+	animation: jump .5s linear alternate ;
+}
+
+	.open-button:hover {
+		box-shadow: 2px 2px 6px skyblue, -2px -2px 6px skyblue;
+		opacity: 0.8;
+	}
+
+	.open-button:active {
+		background-color: #575655;
+		box-shadow: 0 5px #666;
+		transform: translateY(4px);
+	  }
+
+/* The popup chat - hidden by default */
+#botframe {
+	width: 400px;
+	display: none;
+	position: fixed;
+	bottom: 95px;
+    right: 39px;
+	z-index: 9;
+	overflow: auto;
+	border: 1px solid rgba(0,0,0,0.05);
+	box-shadow: 2px 4px 6px rgba(0,0,0,0.1);
+	border-radius: 6px;
+	height: 480px;
+	animation: botopen;
+	animation-duration: 2s;
+}
+
+@keyframes botopen{
+	0% {height: 200px;}
+	100% {height: 480px;}
+}
+
+@keyframes jump {
+	0%   {transform: translate3d(0,0,0) scale3d(1,1,1);}
+	40%  {transform: translate3d(0,30%,0) scale3d(.7,1.5,1);}
+	55% { transform: translate3d(-50%, -150%) rotate(15deg); }
+	60% { transform: translate3d(-50%, -150%) rotate(-15deg); }
+	65% { transform: translate3d(-50%, -150%) rotate(15deg); }
+	70% { transform: translate3d(-50%, -150%) rotate(-15deg); }
+  	100% {transform: translate3d(0,100%,0) scale3d(1.5,.7,1);}
+  }
+
+.bgImage {
+	background-image: url('./Images/HermesBackground.png');
+	/* Full height */
+	height: 100%;
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@media only screen and (min-width: 360px) {
+	#botframe{
+		bottom: 136px;
+	}
+
+}
+@media only screen and (min-width: 280px) {
+	#botframe{
+		bottom: 160px;
+	}
+
+}
+
+@media only screen and (min-width: 1080px) {
+	#botframe{
+		bottom: 95px;
+	}
+
+}

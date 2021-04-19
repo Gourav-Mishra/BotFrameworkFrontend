@@ -1,0 +1,154 @@
+﻿
+.wc-carousel-item{
+    width: 220px!important;
+}
+
+
+.wc-message-groups {
+	background-color: rgb(235, 235, 235);
+}
+
+.wc-upload{
+	border-right: 1px solid rgba(0,0,0,0.2);
+}
+
+.wc-textbox input{
+	margin-left: 5%;
+}
+
+
+.wc-carousel-item > .wc-adaptive-card {
+	width: auto!important;
+	height: auto!important;
+	background-color: #b6e2f5
+}
+
+.wc-carousel-item > .wc-adaptive-card p {
+    font-size: 0.8em;
+}
+
+
+.wc-header {
+	background-color: rgb(20, 75, 125);
+}
+
+.wc-message-wrapper{
+	margin-bottom: 0px;
+}
+
+.wc-message-from {
+	visibility:hidden;
+}
+
+.wc-message-content {
+	font-family: 'Lato', sans-serif;
+	font-size:13px;
+	border-radius: 5px;
+	padding: 8px;
+	word-break: break-word;
+	min-width: 180px;
+}
+
+.wc-message-from-me .wc-message-content {
+	background-color: rgb(42, 143, 215); 
+	color: #FFF;
+}
+
+.wc-console {
+	height: 43px;
+    bottom: 8px;
+	border: 1px solid rgba(0, 0, 0, 0.1) !important;
+	background-color: #fff;
+}
+
+.wc-message-from-me svg.wc-message-callout path {
+	/*visibility: hidden;*/
+	fill: rgb(42, 143, 215);  
+}
+
+.wc-console svg{
+	margin: 14px;
+}
+
+
+.wc-message-from-bot .wc-message-content {
+	background-color:rgb(225, 236, 239);
+    color: rgb(0, 0, 0);
+}
+
+.wc-message-from-bot svg.wc-message-callout path {
+	/*visibility:hidden;*/
+	fill:rgb(225, 236, 239);
+}
+
+.wc-message-groups .wc-suggested-actions .wc-hscroll > ul {
+	background: #1565C0;
+}
+
+.wc-message-from-bot {
+	float:none;
+}
+
+.wc-suggested-actions .wc-hscroll > ul > li button {
+	background-color: #009688;
+    color: #ffffff;
+    min-height: 32px;
+    border-radius: 30px;
+    border-color: #009688;
+	font-size: 0.8em;
+	outline: none;
+}
+
+	.wc-suggested-actions .wc-hscroll > ul > li button:hover {
+		background-color: #FFF;
+		color: #203b64;
+		border-color: #074576;
+	}
+	
+.wc-suggested-actions{
+	background-color: rgb(214, 212, 212);
+}
+
+.wc-card button {
+    background-color: #3f7bb5;
+    color: #ffffff;
+    min-height: 25px;
+    width: auto;
+    padding: 0 16px;
+	border-radius: 5px;
+
+	
+}
+
+.wc-card button:hover {
+    border-color: #3f7bb5;
+}
+
+.ac-image {
+	justify-content: center !important;
+}
+
+.ac-image > img {
+     border-radius:6px;
+     box-shadow: 1px 1px 10px rgba(0,0,0,0.7);
+}
+
+.ac-container{
+	outline: none;
+}
+
+.ac-input{
+	outline: none;
+	padding: 3px 0px 3px 3px;
+	margin: 5px 1px 3px 0px;
+	border: 1px solid #DDDDDD;
+	overflow:auto;
+}
+
+.ac-input:focus{
+	box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+	padding: 3px 0px 3px 3px;
+	margin: 5px 1px 3px 0px;
+	border: 1px solid rgba(81, 203, 238, 1);
+}
+

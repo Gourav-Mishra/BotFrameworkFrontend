@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link href="https://cdn.botframework.com/botframework-webchat/latest/botchat.css" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap" rel="stylesheet">
+		<link href="WebChat.css" rel="stylesheet" />
+
+		<!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+		<script src="https://cdn.botframework.com/botframework-webchat/latest/botchat.js"></script>
+		<script src="https://cdn.botframework.com/botframework-webchat/latest/CognitiveServices.js"></script>
+		
+	</head>
+	<body>
+		<div id="BotChatGoesHere"></div>
+	</body>
+
+	<script>
+			
+		const params = BotChat.queryParams(location.search);
+		const user = {
+			id: params['userid'] || 'User',
+			name: params['username'] || 'User'
+		};
+		const bot = {
+			id: params['botid'] || 'SogetiBot',
+			name: params['botname'] || 'Sogeti Bot'
+		};
+
+		const BotSecret = params['s'] || 'fYysSUsBOeM.iI4M4MOqF5n6h5er7bDRQF5Q9vDKSKc8MI7RZuUk8fs';
+
+		window.botchatDebug = params['debug'] && params['debug'] === 'true';
+
+		const botConnection = new BotChat.DirectLine({
+			domain: params['domain'],
+
+			secret: BotSecret,
+			token: params['t'],
+			webSocket: params['webSocket'] && params['webSocket'] === 'true' // defaults to true
+		});
+
+		/* const speechOptions = {
+			speechRecognizer: new CognitiveServices.SpeechRecognizer({ subscriptionKey: '729129c898d4418fba63bafb54dd520f' }),
+			speechSynthesizer: new CognitiveServices.SpeechSynthesizer({
+				gender: CognitiveServices.SynthesisGender.Female,
+				subscriptionKey: '729129c898d4418fba63bafb54dd520f',
+				voiceName: 'Microsoft Server Speech Text to Speech Voice (en-US, ZiraRUS)'
+			})
+		}; */
+
+		BotChat.App({
+			botConnection: botConnection,
+			bot: bot,
+			locale: params['locale'],
+			resize: 'detect',
+			//sendTyping: false,    // defaults to false. set to true to send 'typing' activities to bot (and other users) when user is typing
+			//speechOptions: speechOptions,
+			user: user
+		}, document.getElementById('BotChatGoesHere'));
+
+	</script>
+</html>
